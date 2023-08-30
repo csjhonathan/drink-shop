@@ -64,7 +64,7 @@ export const PresentationMessage = styled.h1`
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
-  width: 458px;
+  width: 600px;
   height: 150px;
   flex-shrink: 0;
   @media(max-width: 768px){
@@ -93,6 +93,7 @@ export const CTAButton = styled.button`
   line-height: normal;
   transition: background-color .3s;
   margin-left: 30px;
+  transition: all .4s;
   cursor: pointer;
   &:hover{
     box-shadow: 0px 4px 10px rgba(0, 236, 91, 0.5);

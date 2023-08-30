@@ -1,13 +1,31 @@
 import { useForm } from 'react-hook-form';
 import { ContactForm, ContactInfo, FormArea, FormCell, InputCellphone, InputEmail, InputLabel, InputMessage, InputName, InputSubject, SubmitButton } from './styles.js';
 import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Loader from '../../Loader/Loader.jsx';
 
 export default function Form(){
 	const { register, handleSubmit } = useForm();
 	const [focused, setFocused] = useState(null);
-
+	const [disabled, setDisabled] = useState(false);
 	function submitForm(form){
+		setDisabled(true);
 		console.log(form);
+		for(const prop in form){
+			if(!form[prop]) {
+				setDisabled(false);
+
+				return toast.error('Preencha todos os campos!');
+			}
+		}
+
+		setTimeout(()=>{
+			toast.success('Seu formulário foi enviado. Entraremos em contato em breve.');
+			setDisabled(false);
+
+
+		}, 3000);
 	}
 
 	return (
@@ -23,7 +41,7 @@ export default function Form(){
 						{...register('username')}
 						onFocus={()=> setFocused('username')}
 						onBlur={()=>setFocused(null)}
-
+						disabled={disabled}
 					/>
 				</FormCell>
 				<ContactInfo>
@@ -33,10 +51,13 @@ export default function Form(){
 							type='text'
 							name='cell'
 							id='cell'
-							placeholder='(21) 00000-0000'
+							placeholder='(DDD) 12345-6789'
+							mask={'(99) 99999-9999'}
 							{...register('cell')}
 							onFocus={()=> setFocused('cell')}
 							onBlur={()=>setFocused(null)}
+							disabled={disabled}
+
 						/>
 					</FormCell>
 					<FormCell>
@@ -49,6 +70,7 @@ export default function Form(){
 							{...register('email')}
 							onFocus={()=> setFocused('email')}
 							onBlur={()=>setFocused(null)}
+							disabled={disabled}
 
 						/>
 					</FormCell>
@@ -61,6 +83,8 @@ export default function Form(){
 						id='subject'
 						onFocus={()=> setFocused('subject')}
 						onBlur={()=>setFocused(null)}
+						disabled={disabled}
+
 					>
 						<option value={''}>Selecione um Assunto</option>
 						<option value={'bottle'}>Garrafa 350ml</option>
@@ -76,10 +100,13 @@ export default function Form(){
 						{...register('message')}
 						onFocus={()=> setFocused('message')}
 						onBlur={()=>setFocused(null)}
+						disabled={disabled}
+
 					/>
 				</FormCell>
-				<SubmitButton>AQUI UM CTA</SubmitButton>
+				<SubmitButton disabled={disabled}>{disabled ? <Loader/> : 'Enviar formulário'}</SubmitButton>
 			</ContactForm>
+			<ToastContainer/>
 		</FormArea>
 	);
 }

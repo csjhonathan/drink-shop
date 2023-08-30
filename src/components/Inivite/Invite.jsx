@@ -19,7 +19,8 @@ export default function Invite(){
 		<StyledInvite>
 			<CTAArea>
 				<InviteText>Quer experimentar?</InviteText>
-				<InviteButton>Aqui um CTA</InviteButton></CTAArea>
+				<a href="https://www.conectaai.com/" target="_blank" rel="noreferrer"><InviteButton>Veja mais</InviteButton></a>
+			</CTAArea>
 			<StyledTin
 				src={tin}
 				alt="latinha de guaraná"

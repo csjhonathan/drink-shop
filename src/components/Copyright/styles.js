@@ -32,5 +32,5 @@ export const ProjectedBy = styled.div`
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-
+  gap:10px
 `;

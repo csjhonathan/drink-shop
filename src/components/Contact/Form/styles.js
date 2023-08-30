@@ -1,4 +1,5 @@
 import { styled } from 'styled-components';
+import InputMask from 'react-input-mask';
 
 export const FormArea = styled.div`
   height: 100%;
@@ -6,7 +7,7 @@ export const FormArea = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  padding-top: 5%;
   @media(max-width: 768px){
     width: 100%;
     padding-top: 15px;
@@ -81,7 +82,7 @@ export const ContactInfo = styled.div`
   }
 `;
 
-export const InputCellphone = styled.input`
+export const InputCellphone = styled(InputMask)`
   width: 160px;
   height: 46px;
 
@@ -177,8 +178,17 @@ export const InputLabel = styled.label`
     opacity:${({focused})=> focused ? 1 : 0.296};
 `;
 export const SubmitButton = styled.button`
+  color: #101213;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 50%;
-  height: 56px;
+  min-height: 56px;
   border: none;
   border-radius: 30px;
   background-color: #00EC5B;

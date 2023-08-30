@@ -11,7 +11,6 @@ export default function Header(){
 				<FacebookIcon/>
 				<InstagramIcon/>
 			</SocialArea>
-
 		</StyledHeader>
 	);
 }

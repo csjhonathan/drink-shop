@@ -23,9 +23,9 @@ export const ProductItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: background-color .3s;
+  transition: all .3s;
   &:hover{
-    border: 2px solid rgba(0, 236, 91, 0.5);;
+    border: 1px solid rgba(0, 236, 91, 0.5);;
   }
 `;
 
@@ -62,9 +62,57 @@ export const ProductButton = styled.button`
   bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
-  transition: box-shadow .3s;
+  color: #101213;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   cursor: pointer;
+  transition: all .3s;
   &:hover{
     box-shadow: 0px 4px 10px rgba(0, 236, 91, 0.5);
+  }
+`;
+
+
+export const ModalContent = styled.div`
+  height: 50%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ModalProductTitle = styled.h2`
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+`;
+
+export const ModalProductImg = styled.img`
+`;
+
+export const CloseModalButton = styled.button`
+  width: 193px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 30px;
+  border: none;
+  color: #101213;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  transition: all .4s;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0px 4px 10px rgba(255, 0, 0, 0.5);
   }
 `;

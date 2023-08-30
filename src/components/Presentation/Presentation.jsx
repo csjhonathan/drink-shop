@@ -4,6 +4,12 @@ import guarana from '../../assets/lata-guarana.png';
 import { CTAArea, CTAButton, GuaranaTin, PresentationBackground, PresentationContent, PresentationMessage, StyledPresentation } from './styles.js';
 
 export default function Presentation(){
+	const handleCTAButtonClick = () => {
+		window.scrollTo({
+			top: document.body.scrollHeight,
+			behavior: 'smooth',
+		});
+	};
 
 	return(
 		<StyledPresentation>
@@ -11,8 +17,8 @@ export default function Presentation(){
 			<Header/>
 			<PresentationContent>
 				<CTAArea>
-					<PresentationMessage>Aqui um título de duas linhas</PresentationMessage>
-					<CTAButton>Aqui um CTA</CTAButton>
+					<PresentationMessage>Ofereça o melhor para os seus clientes!</PresentationMessage>
+					<CTAButton onClick={handleCTAButtonClick}>Entre em contato</CTAButton>
 				</CTAArea>
 				<GuaranaTin src={guarana} alt ="latinha de guaraná"/>
 			</PresentationContent>
