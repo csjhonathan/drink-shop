@@ -1,6 +1,6 @@
-import { products } from '../../../constants/products.js';
-import { StyledProductsList } from '../styles.js';
 import Product from './Product.jsx';
+import { StyledProductsList } from './styles.js';
+import products from '../../../constants/products.js';
 
 export default function ProductsList(){
 	return (

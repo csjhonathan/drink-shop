@@ -40,6 +40,9 @@ module.exports = {
     ],
     "react/prop-types":[
       "off"
+    ],
+    "no-unexpected-multiline":[
+      "off"
     ]
   },
 }

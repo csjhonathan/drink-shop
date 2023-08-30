@@ -1,4 +1,4 @@
-import { ProductButton, ProductImg, ProductItem, ProductTextDescription, ProductTitle } from '../styles.js';
+import { ProductButton, ProductImg, ProductItem, ProductTextDescription, ProductTitle } from './styles.js';
 
 export default function Product({image, title,description}){
 	return (

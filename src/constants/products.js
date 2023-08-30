@@ -12,3 +12,5 @@ export const products = [
 		description: 'Lorem ipsum dolor sit amet',
 	},
 ];
+
+export default products;

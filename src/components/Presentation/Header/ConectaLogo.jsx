@@ -1,4 +1,4 @@
-import { StyledConectaLogo } from '../styles.js';
+import { StyledConectaLogo } from './styles.js';
 
 export default function ConectaLogo(){
 	return (

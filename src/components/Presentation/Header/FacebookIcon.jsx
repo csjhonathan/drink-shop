@@ -1,4 +1,4 @@
-import { StyledFacebookIcon } from '../styles.js';
+import { StyledFacebookIcon } from './styles.js';
 
 export default function FacebookIcon(){
 	return (

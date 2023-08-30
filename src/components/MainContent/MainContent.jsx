@@ -1,4 +1,5 @@
 import ProductsList from './ProductsList/ProductsList.jsx';
+import Testimonials from './Testimonials/Testimonials.jsx';
 import { ProductsDescription, ProductsTitle, ProductsTitleAndDescription, StyledMainContent } from './styles.js';
 
 export default function MainContent(){
@@ -11,6 +12,7 @@ export default function MainContent(){
 				</ProductsDescription>
 			</ProductsTitleAndDescription>
 			<ProductsList/>
+			<Testimonials/>
 		</StyledMainContent>
 	);
 }

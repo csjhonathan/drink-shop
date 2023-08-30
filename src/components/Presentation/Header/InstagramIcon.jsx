@@ -1,4 +1,4 @@
-import { StyledinstagramIcon } from '../styles.js';
+import { StyledinstagramIcon } from './styles.js';
 
 export default function InstagramIcon(){
 	return (
