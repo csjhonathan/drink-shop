@@ -29,7 +29,7 @@ export const ProductsDescription = styled.p`
   line-height: normal;
   width: 400px;
   text-align: center;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     width: 250px;
   }
 `;

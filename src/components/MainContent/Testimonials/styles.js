@@ -6,7 +6,7 @@ export const StyledTestimonials = styled.div`
   height: 90vh;
   align-self: center;
   display: flex;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     height: 1096px;
     flex-direction: column;
   }
@@ -24,7 +24,7 @@ export const LeftSideContainer = styled.div`
     left: 0;
     z-index: -5;
   }
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     height: 50%;
     width: 100%;
   }
@@ -32,7 +32,7 @@ export const LeftSideContainer = styled.div`
 
 export const RightSideContainer = styled.div`
   width: 50%;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     height: 50%;
     width: 100%;
   }
@@ -47,7 +47,7 @@ export const TestimonialsCarousel = styled.div`
   border: 1px solid #000;
   background: #1B1F1C;
   gap: 20px;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     gap: 10px;
   }
 `;
@@ -131,7 +131,7 @@ export const TestimonialText = styled.p`
   ${({ fadeInEffect }) => fadeInEffect && fadeInAnimation};
   opacity: ${({ fadeInEffect }) => (fadeInEffect ? 0 : 1)};
   transition: opacity 1s ease-in-out;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     height: 30px;
   }
 `;

@@ -1,4 +1,4 @@
-import { InviteButton, InviteText, StyledInvite, StyledTin } from './styles.js';
+import { CTAArea, InviteButton, InviteText, StyledInvite, StyledTin } from './styles.js';
 import tin from '../../assets/lata-guaraná-produto.png';
 import { useEffect, useState } from 'react';
 
@@ -17,8 +17,9 @@ export default function Invite(){
 
 	return (
 		<StyledInvite>
-			<InviteText>Quer experimentar?</InviteText>
-			<InviteButton>Aqui um CTA</InviteButton>
+			<CTAArea>
+				<InviteText>Quer experimentar?</InviteText>
+				<InviteButton>Aqui um CTA</InviteButton></CTAArea>
 			<StyledTin
 				src={tin}
 				alt="latinha de guaraná"
@@ -46,7 +47,7 @@ export default function Invite(){
 				width={'286.53px'}
 				height={'503.264px'}
 				transform={'rotate(15deg)'}
-				right={viewWindow < 1440 ?'5%':'20%'}
+				right={viewWindow < 1440 ?'1%':'20%'}
 				top={'-70px'}
 				viewWindow={viewWindow}
 			/>

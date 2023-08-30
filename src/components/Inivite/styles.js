@@ -10,9 +10,23 @@ export const StyledInvite = styled.div`
   align-items: center;
   gap: 24px;
   position: relative;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     margin-top: 100px;
     height: 370px;
+  }
+`;
+
+export const CTAArea = styled.div`
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30%;
+  gap: 15px;
+  @media(max-width: 450px){
+    justify-content:center;
+    margin-top: 130px;
   }
 `;
 
@@ -23,14 +37,11 @@ export const InviteText = styled.p`
   font-style: normal;
   font-weight: 800;
   line-height: normal;
-  @media(max-width: 735px){
-    margin-top: 130px;
-  }
 `;
 
 export const InviteButton = styled.button`
   width: 193px;
-  height: 56px;
+  min-height: 56px;
   background-color: #1B1F1C;
   color: #FFF;
   font-family: Inter;
@@ -54,8 +65,8 @@ export const StyledTin = styled.img`
   left: ${({left})=> left};
   right: ${({right})=> right};
   top: ${({top})=> top};
-  display: ${({viewWindow})=> viewWindow > 735 ? 'initial' : 'none'};
-  @media(max-width: 735px){
+  display: ${({viewWindow})=> viewWindow > 450 ? 'initial' : 'none'};
+  @media(max-width: 450px){
     margin-top: 90px;
     height: 370px;
     transform: rotate(0deg);

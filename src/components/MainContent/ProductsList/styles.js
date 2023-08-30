@@ -5,7 +5,7 @@ export const StyledProductsList = styled.ul`
   display: flex;
   justify-content: center;
   gap: 80px;
-  @media(max-width: 735px){
+  @media(max-width: 768px){
     flex-direction: column;
     align-items: center;
   }
@@ -25,7 +25,7 @@ export const ProductItem = styled.li`
   align-items: center;
   transition: background-color .3s;
   &:hover{
-    background-color: lightgray;
+    border: 2px solid rgba(0, 236, 91, 0.5);;
   }
 `;
 
@@ -62,9 +62,9 @@ export const ProductButton = styled.button`
   bottom: -28px;
   left: 50%;
   transform: translateX(-50%);
-  transition: background-color .3s;
+  transition: box-shadow .3s;
   cursor: pointer;
   &:hover{
-    background-color: green;
+    box-shadow: 0px 4px 10px rgba(0, 236, 91, 0.5);
   }
 `;
