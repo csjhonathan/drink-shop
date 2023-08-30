@@ -35,6 +35,10 @@ export const StyledConectaLogo = styled.a`
 export const StyledFacebookIcon = styled(AiFillFacebook)`
   font-size: 30px;
   color: #FFF;
+
+`;
+
+export const FacebookLink = styled.a`
   cursor: pointer;
   :hover{
     color: blue;
@@ -45,6 +49,9 @@ export const StyledinstagramIcon = styled(AiOutlineInstagram)`
   font-size: 30px;
   color: #FFF;
   transition: color .4s;
+`;
+
+export const InstagramLink = styled.a`
   cursor: pointer;
   :hover{
     color: pink;

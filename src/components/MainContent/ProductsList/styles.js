@@ -23,9 +23,10 @@ export const ProductItem = styled.li`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: all .3s;
+  transition: all .4s;
+  border: 2px solid white;
   &:hover{
-    border: 1px solid rgba(0, 236, 91, 0.5);;
+    border: 2px solid rgba(0, 236, 91, 0.5);
   }
 `;
 

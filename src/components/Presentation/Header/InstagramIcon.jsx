@@ -1,5 +1,5 @@
-import { StyledinstagramIcon } from './styles.js';
+import { InstagramLink, StyledinstagramIcon } from './styles.js';
 
 export default function InstagramIcon(){
-	return <a href="https://instagram.com" target='_blank' rel="noreferrer"><StyledinstagramIcon/></a>;
+	return <InstagramLink href="https://instagram.com" target='_blank' rel="noreferrer"><StyledinstagramIcon/></InstagramLink>;
 }
