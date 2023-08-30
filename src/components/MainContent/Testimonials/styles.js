@@ -2,12 +2,11 @@ import styled, { keyframes, css } from 'styled-components';
 
 export const StyledTestimonials = styled.div`
   margin-top: 150px;
-  width: 60%;
+  width: 90%;
   height: 90vh;
   align-self: center;
   display: flex;
   @media(max-width: 735px){
-    width: 90%;
     height: 1096px;
     flex-direction: column;
   }
@@ -145,6 +144,7 @@ export const TestimonialAuthor = styled.p`
   font-weight: 400;
   line-height: normal;
   opacity: 0;
+  margin-top: 10px;
   ${({ fadeInEffect }) => fadeInEffect && fadeInAnimation};
   opacity: ${({ fadeInEffect }) => (fadeInEffect ? 0 : 1)};
   transition: opacity 1s ease-in-out;

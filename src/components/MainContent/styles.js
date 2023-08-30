@@ -3,7 +3,6 @@ import { styled } from 'styled-components';
 export const StyledMainContent = styled.div`
   display: flex;
   flex-direction: column;
-
 `;
 
 export const ProductsTitleAndDescription = styled.div`
