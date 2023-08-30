@@ -9,7 +9,6 @@ export default function Testimonials(){
 	const [testimonial, setTestimonial] = useState(testimonials[0]);
 	const [fadeInEffect, setFadeInEffect] = useState(false);
 
-	console.log({testimonials});
 	useEffect(() => {
 		setFadeInEffect(true);
 		const timeout = setTimeout(() => {
@@ -19,11 +18,12 @@ export default function Testimonials(){
 	}, [testimonial]);
 
 	useInterval(()=>{
-		if(testimonial.id === testimonials.length){
-			setTestimonial(testimonials[0]);
-		}else{
-			setTestimonial(testimonials[testimonial.id]);
-		}
+		setTestimonial(
+			testimonial.id === testimonials.length ?
+				testimonials[0]
+				:
+				testimonials[testimonial.id]
+		);
 	},5000);
 
 	return (
