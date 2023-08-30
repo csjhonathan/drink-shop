@@ -1,4 +1,5 @@
 import Contact from '../../components/Contact/Contact.jsx';
+import Copyright from '../../components/Copyright/Copyright.jsx';
 import Invite from '../../components/Inivite/Invite.jsx';
 import MainContent from '../../components/MainContent/MainContent.jsx';
 import Presentation from '../../components/Presentation/Presentation.jsx';
@@ -11,6 +12,7 @@ export default function LandingPage(){
 			<MainContent/>
 			<Invite/>
 			<Contact/>
+			<Copyright/>
 		</StyledLanding>
 	);
 }
