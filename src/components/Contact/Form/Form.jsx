@@ -18,7 +18,7 @@ export default function Form(){
 				setTimeout(()=>{
 					setDisabled(false);
 					toast.error('Preencha todos os campos!');
-				},1000);
+				},200);
 				return;
 			}
 		}
