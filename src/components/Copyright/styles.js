@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const StyledCopyright = styled.footer`
+export const CopyrightContainer = styled.footer`
   padding: 20px;
   background-color: #1B1F1C;
   height: 200px;

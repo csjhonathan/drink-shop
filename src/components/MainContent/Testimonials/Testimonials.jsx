@@ -1,4 +1,4 @@
-import { BtnCarouselList, ChangeTestimonialBtn, InviteContainer, LeftSideContainer,RightSideContainer, StyledTestimonials, TestimonialAuthor, TestimonialText, TestimonialsCarousel } from './styles.js';
+import { BtnCarouselList, ChangeTestimonialBtn, InviteContainer, LeftSideContainer,RightSideContainer, TestimonialsContainer, TestimonialAuthor, TestimonialText, TestimonialsCarousel } from './styles.js';
 import simleyWoman from '../../../assets/mulher-sorrindo-drink.png';
 import barman from '../../../assets/barman-servindo-drink.png';
 import testimonials from '../../../constants/testimonials.js';
@@ -27,7 +27,7 @@ export default function Testimonials(){
 	},5000);
 
 	return (
-		<StyledTestimonials>
+		<TestimonialsContainer>
 			<LeftSideContainer>
 				<img src={simleyWoman} alt="mulher sorrindo com drink na mão" loading='lazy'/>
 			</LeftSideContainer>
@@ -47,6 +47,6 @@ export default function Testimonials(){
 					<p>Peça para seu bar</p>
 				</InviteContainer>
 			</RightSideContainer>
-		</StyledTestimonials>
+		</TestimonialsContainer>
 	);
 }

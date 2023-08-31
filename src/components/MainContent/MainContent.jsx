@@ -1,10 +1,10 @@
 import ProductsList from './ProductsList/ProductsList.jsx';
 import Testimonials from './Testimonials/Testimonials.jsx';
-import { ProductsDescription, ProductsTitle, ProductsTitleAndDescription, StyledMainContent } from './styles.js';
+import { ProductsDescription, ProductsTitle, ProductsTitleAndDescription, MainContentContainer } from './styles.js';
 
 export default function MainContent(){
 	return (
-		<StyledMainContent>
+		<MainContentContainer>
 			<ProductsTitleAndDescription>
 				<ProductsTitle>Produtos</ProductsTitle>
 				<ProductsDescription>
@@ -13,6 +13,6 @@ export default function MainContent(){
 			</ProductsTitleAndDescription>
 			<ProductsList/>
 			<Testimonials/>
-		</StyledMainContent>
+		</MainContentContainer>
 	);
 }

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const StyledPresentation = styled.div`
+export const PresentationContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;

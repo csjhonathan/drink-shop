@@ -1,10 +1,10 @@
 import Product from './Product.jsx';
-import { StyledProductsList } from './styles.js';
+import { ProductsListContainer } from './styles.js';
 import products from '../../../constants/products.js';
 
 export default function ProductsList(){
 	return (
-		<StyledProductsList>
+		<ProductsListContainer>
 			{products.map(({image, title ,description}, index) => (
 				<Product
 					key={index}
@@ -12,6 +12,6 @@ export default function ProductsList(){
 					description={description}
 					title={title}/>
 			))}
-		</StyledProductsList>
+		</ProductsListContainer>
 	);
 }

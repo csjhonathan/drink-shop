@@ -1,12 +1,12 @@
 import { styled } from 'styled-components';
 import InputMask from 'react-input-mask';
 
-export const FormArea = styled.div`
-  height: 100%;
+export const FormContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   padding-top: 5%;
   @media(max-width: 768px){
     width: 100%;
@@ -19,40 +19,48 @@ export const ContactForm = styled.form`
   flex-direction: column;
   height: 70%;
   gap: 15px;
-  input{
-    padding: 5px;
-    transition: all .4s;
-    background-color: #1B1F1C;
-    color: #FFF;
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    border-bottom: none;
-    border-left: none;
-    border-right: 1px solid #FFF;
-    border-top: 1px solid #FFF;
-    &:focus{
-      outline: none;
-      background: rgba(255, 255, 255, 0.20);
-      border-color: #00EC5B;
-    }
-    &:hover{
-      background: rgba(255, 255, 255, 0.20);
-    }
-  }
+
   @media(max-width: 768px){
     width: 100%;
     height: 100%;
     align-items: center;
     input{
-      width: 100%;
-      height: 46px;
-      flex-shrink: 0;
+      width: 100%
     }
   }
 `;
+
+const FormInput = styled(InputMask)`
+  height: 46px;
+  padding: 5px;
+  transition: all .4s;
+  background-color: #1B1F1C;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-bottom: none;
+  border-left: none;
+  border-right: 1px solid #FFF;
+  border-top: 1px solid #FFF;
+  &:focus{
+    outline: none;
+    background: rgba(255, 255, 255, 0.20);
+    border-color: #00EC5B;
+  }
+  &:hover{
+    background: rgba(255, 255, 255, 0.20);
+  }
+
+  @media(max-width: 768px){
+    width: 100%;
+    height: 46px;
+    flex-shrink: 0;
+  }
+`;
+
 export const FormCell = styled.div`
   display: flex;
   justify-content: center;
@@ -63,9 +71,8 @@ export const FormCell = styled.div`
   }
 `;
 
-export const InputName = styled.input`
+export const InputName = styled(FormInput)`
   width: 555px;
-  height: 46px;
 `;
 
 export const ContactInfo = styled.div`
@@ -76,21 +83,15 @@ export const ContactInfo = styled.div`
     gap: 15px;
     width: 100%;
     align-items: center;
-    input{
-      width: 100%;
-    }
   }
 `;
 
-export const InputCellphone = styled(InputMask)`
+export const InputCellphone = styled(FormInput)`
   width: 160px;
-  height: 46px;
-
 `;
 
-export const InputEmail = styled.input`
+export const InputEmail = styled(FormInput)`
   width: 360px;
-  height: 46px;
 `;
 
 export const InputSubject= styled.select`
@@ -108,19 +109,6 @@ export const InputSubject= styled.select`
   border-left: none;
   border-right: 1px solid #FFF;
   border-top: 1px solid #FFF;
-  option {
-      background-color: #1B1F1C;
-      color: #FFF;
-      font-family: Inter;
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-      border-bottom: none;
-      border-left: none;
-      border-right: 1px solid #FFF;
-      border-top: 1px solid #FFF;
-    }
   &:focus{
     outline: none;
     background: rgba(255, 255, 255, 0.20);
@@ -132,6 +120,20 @@ export const InputSubject= styled.select`
   @media(max-width: 768px){
     width: 100%;
   }
+`;
+
+export const SubjectOption = styled.option`
+  background-color: #1B1F1C;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-bottom: none;
+  border-left: none;
+  border-right: 1px solid #FFF;
+  border-top: 1px solid #FFF;
 `;
 
 export const InputMessage= styled.textarea`

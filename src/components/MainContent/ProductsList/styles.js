@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
 
 
-export const StyledProductsList = styled.ul`
+export const ProductsListContainer = styled.ul`
   display: flex;
   justify-content: center;
   gap: 80px;
@@ -69,7 +69,7 @@ export const ProductButton = styled.button`
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  cursor: pointer;
+  cursor: zoom-in;
   transition: all .3s;
   &:hover{
     box-shadow: 0px 4px 10px rgba(0, 236, 91, 0.5);
@@ -93,7 +93,6 @@ export const ModalProductTitle = styled.h2`
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-
 `;
 
 export const ModalProductImg = styled.img`

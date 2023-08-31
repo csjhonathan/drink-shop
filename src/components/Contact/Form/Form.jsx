@@ -1,9 +1,10 @@
 import { useForm } from 'react-hook-form';
-import { ContactForm, ContactInfo, FormArea, FormCell, InputCellphone, InputEmail, InputLabel, InputMessage, InputName, InputSubject, SubmitButton } from './styles.js';
+import { ContactForm, ContactInfo, FormContainer, FormCell, InputCellphone, InputEmail, InputLabel, InputMessage, InputName, InputSubject, SubmitButton, SubjectOption } from './styles.js';
 import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Loader from '../../Loader/Loader.jsx';
+import { faker } from '@faker-js/faker';
 
 export default function Form(){
 	const { register, handleSubmit } = useForm();
@@ -14,22 +15,22 @@ export default function Form(){
 		console.log(form);
 		for(const prop in form){
 			if(!form[prop]) {
-				setDisabled(false);
-
-				return toast.error('Preencha todos os campos!');
+				setTimeout(()=>{
+					setDisabled(false);
+					toast.error('Preencha todos os campos!');
+				},1000);
+				return;
 			}
 		}
 
 		setTimeout(()=>{
 			toast.success('Seu formulário foi enviado. Entraremos em contato em breve.');
 			setDisabled(false);
-
-
-		}, 3000);
+		}, faker.number.int({min:1000, max:4000}));
 	}
 
 	return (
-		<FormArea>
+		<FormContainer>
 			<ContactForm onSubmit={handleSubmit(submitForm)}>
 				<FormCell>
 					<InputLabel htmlFor="username" focused={focused === 'username'}>NOME</InputLabel>
@@ -84,11 +85,10 @@ export default function Form(){
 						onFocus={()=> setFocused('subject')}
 						onBlur={()=>setFocused(null)}
 						disabled={disabled}
-
 					>
-						<option value={''}>Selecione um Assunto</option>
-						<option value={'bottle'}>Garrafa 350ml</option>
-						<option value={'tin'}>Lata 350ml</option>
+						<SubjectOption value={''}>Selecione um Assunto</SubjectOption>
+						<SubjectOption value={'bottle'}>Garrafa 350ml</SubjectOption>
+						<SubjectOption value={'tin'}>Lata 350ml</SubjectOption>
 					</InputSubject>
 				</FormCell>
 				<FormCell>
@@ -107,6 +107,6 @@ export default function Form(){
 				<SubmitButton disabled={disabled}>{disabled ? <Loader/> : 'Enviar formulário'}</SubmitButton>
 			</ContactForm>
 			<ToastContainer/>
-		</FormArea>
+		</FormContainer>
 	);
 }

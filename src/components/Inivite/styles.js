@@ -1,6 +1,6 @@
 import { styled } from 'styled-components';
 
-export const StyledInvite = styled.div`
+export const InviteContainer = styled.div`
   background-color: #00EC5B;
   height: 30vh;
   margin-top: 146px;

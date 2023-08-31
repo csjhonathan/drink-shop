@@ -1,6 +1,6 @@
 import styled, { keyframes, css } from 'styled-components';
 
-export const StyledTestimonials = styled.div`
+export const TestimonialsContainer = styled.div`
   margin-top: 150px;
   width: 90%;
   height: 90vh;

@@ -1,22 +1,12 @@
-import { CTAArea, InviteButton, InviteText, StyledInvite, StyledTin } from './styles.js';
+import { CTAArea, InviteButton, InviteText, InviteContainer, StyledTin } from './styles.js';
 import tin from '../../assets/lata-guaraná-produto.png';
-import { useEffect, useState } from 'react';
+import { useWidth } from '../../hooks/useWidth.js';
 
 export default function Invite(){
-	const [viewWindow, setViewWindow] = useState(window.innerWidth);
-	function handleResize() {
-		setViewWindow(window.innerWidth);
-	}
-
-	useEffect(() => {
-		window.addEventListener('resize', handleResize);
-		return () => {
-			window.removeEventListener('resize', handleResize);
-		};
-	}, []);
+	const {viewWindow} = useWidth();
 
 	return (
-		<StyledInvite>
+		<InviteContainer>
 			<CTAArea>
 				<InviteText>Quer experimentar?</InviteText>
 				<a href="https://www.conectaai.com/" target="_blank" rel="noreferrer"><InviteButton>Veja mais</InviteButton></a>
@@ -52,6 +42,6 @@ export default function Invite(){
 				top={'-70px'}
 				viewWindow={viewWindow}
 			/>
-		</StyledInvite>
+		</InviteContainer>
 	);
 }

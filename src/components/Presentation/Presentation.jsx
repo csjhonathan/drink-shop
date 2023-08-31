@@ -1,7 +1,7 @@
 import Header from './Header/Header.jsx';
 import headerBg from '../../assets/header-bg.png';
 import guarana from '../../assets/lata-guarana.png';
-import { CTAArea, CTAButton, GuaranaTin, PresentationBackground, PresentationContent, PresentationMessage, StyledPresentation } from './styles.js';
+import { CTAArea, CTAButton, GuaranaTin, PresentationBackground, PresentationContent, PresentationMessage, PresentationContainer } from './styles.js';
 
 export default function Presentation(){
 	const handleCTAButtonClick = () => {
@@ -12,7 +12,7 @@ export default function Presentation(){
 	};
 
 	return(
-		<StyledPresentation>
+		<PresentationContainer>
 			<PresentationBackground src={headerBg} alt="fundo da apresentação"/>
 			<Header/>
 			<PresentationContent>
@@ -22,6 +22,6 @@ export default function Presentation(){
 				</CTAArea>
 				<GuaranaTin src={guarana} alt ="latinha de guaraná"/>
 			</PresentationContent>
-		</StyledPresentation>
+		</PresentationContainer>
 	);
 }
